@@ -131,5 +131,7 @@ Align and stitch images (Panorama creation).
 
 While the results are accurate, future enhancements such as multi-band blending could improve the seamlessness of the stitched images.
 
+--Author
+#Divyansh Kumar
 
 
