@@ -6,8 +6,8 @@ import numpy as np
 current_dir = os.path.dirname(os.path.abspath(__file__))  # Directory of the current .py file
 
 # Paths to input and output directories
-images_dir = os.path.join(current_dir, '..', 'images')
-results_dir = os.path.join(current_dir, '..', 'results')
+images_dir = os.path.join(current_dir, '..', 'image')
+results_dir = os.path.join(current_dir, '..', 'result')
 
 # Input image filename
 input_image_name = "coins2.jpeg"
