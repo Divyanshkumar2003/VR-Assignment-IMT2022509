@@ -46,9 +46,10 @@ Execution Instructions
 
 Navigate to the Q1 folder and run the following commands:
 
-python coin_edge.py
-python coin_segmentation.py
-Expected Outputs:
+--python coin_edge.py
+--python coin_segmentation.py
+
+-Expected Outputs:
 
 coins_with_edge_detection.jpeg – Image with detected coin edges highlighted and the total coin count.
 
@@ -59,75 +60,75 @@ segmented_coin_*.jpg – Individual images of segmented coins.
 2. Image Stitching
 
 Navigate to the Q2 folder and execute the following command:
-python stitch_panorama.py
+--python stitch_panorama.py
 Expected Output:
-final_panorama.jpg – The resulting stitched panoramic image.
+--final_panorama.jpg – The resulting stitched panoramic image.
 
-Methodology
+---Methodology
 
 Part 1: Coin Detection and Segmentation
 
 🔹 Steps Implemented:
 
-Edge Detection (coin_edge.py):
+---Edge Detection (coin_edge.py):
 
-Convert the image to grayscale and apply Gaussian blur.
+#Convert the image to grayscale and apply Gaussian blur.
 
-Detect edges using the Canny edge detection algorithm.
+#Detect edges using the Canny edge detection algorithm.
 
-Identify circular shapes using the Hough Circle Transform.
+#Identify circular shapes using the Hough Circle Transform.
 
-Overlay detected circles on the original image and count the coins.
+#Overlay detected circles on the original image and count the coins.
 
-Segmentation (coin_segmentation.py):
+---Segmentation (coin_segmentation.py):
 
-Convert the image to grayscale and apply Gaussian blur.
+#Convert the image to grayscale and apply Gaussian blur.
 
-Perform Otsu’s thresholding to create a binary mask.
+#Perform Otsu’s thresholding to create a binary mask.
 
-Apply morphological operations to refine the coin regions.
+#Apply morphological operations to refine the coin regions.
 
-Use the Distance Transform to distinguish between foreground and background.
+#Use the Distance Transform to distinguish between foreground and background.
 
-Implement the Watershed algorithm to segment and isolate individual coins.
+#Implement the Watershed algorithm to segment and isolate individual coins.
 
-Extract and save each coin as a separate image.
+---Extract and save each coin as a separate image.
 
 📌 Observations:
 
-Edge Detection provides accurate coin boundary identification but may misidentify overlapping coins or noisy regions.
+#Edge Detection provides accurate coin boundary identification but may misidentify overlapping coins or noisy regions.
 
-Segmentation using the Watershed algorithm effectively separates overlapping coins but may require tuning for better accuracy.
+#Segmentation using the Watershed algorithm effectively separates overlapping coins but may require tuning for better accuracy.
 
 Part 2: Image Stitching
 
 🔹 Steps Implemented:
 
-Load the overlapping images.
+#Load the overlapping images.
 
-Convert images to grayscale for feature extraction.
+#Convert images to grayscale for feature extraction.
 
-Use SIFT to detect keypoints and compute descriptors.
+#Use SIFT to detect keypoints and compute descriptors.
 
-Match features using a FLANN-based matcher and apply Lowe’s ratio test to filter results.
+#Match features using a FLANN-based matcher and apply Lowe’s ratio test to filter results.
 
-Compute the homography matrix using RANSAC to align images.
+#Compute the homography matrix using RANSAC to align images.
 
-Warp and merge images to generate the panoramic output.
+#Warp and merge images to generate the panoramic output.
 
 📌 Observations:
 
-Feature Matching using SIFT and FLANN performs reliably when the images have significant overlap and distinct features.
+#Feature Matching using SIFT and FLANN performs reliably when the images have significant overlap and distinct features.
 
-Image Stitching is successful for well-aligned images, though minor misalignments may occur without additional blending techniques.
+#Image Stitching is successful for well-aligned images, though minor misalignments may occur without additional blending techniques.
 
 🎯 Conclusion
 
 This project successfully implements core Computer Vision techniques to:
 
-Detect and segment objects (Coin detection).
+#Detect and segment objects (Coin detection).
 
-Align and stitch images (Panorama creation).
+#Align and stitch images (Panorama creation).
 
 While the results are accurate, future enhancements such as multi-band blending could improve the seamlessness of the stitched images.
 
