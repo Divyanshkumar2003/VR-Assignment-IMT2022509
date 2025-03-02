@@ -5,8 +5,8 @@ import os
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-images_dir = os.path.join(current_dir, '..', 'images')
-results_dir = os.path.join(current_dir, '..', 'results')
+images_dir = os.path.join(current_dir, '..', 'image')
+results_dir = os.path.join(current_dir, '..', 'result')
 
 input_image_name = "coins1.jpg"
 input_image_path = os.path.join(images_dir, input_image_name)
