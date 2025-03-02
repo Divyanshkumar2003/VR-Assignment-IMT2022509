@@ -31,16 +31,15 @@ VR_Assignment1_Divyansh_Kumar_IMT2022509/
 │   └── final_panorama.jpg               # Output stitched panorama image
 │
 ├── README.md                             # Project documentation
-├── requirements.txt                      # List of required Python packages
-└── VR_Assignment1_Divyansh_Kumar_IMT2022509.pdf # Final report in PDF format
 
-Dependencies
+
+---Dependencies
 
 Ensure the required Python packages are installed before running the scripts. Use the following command:
 pip install opencv-python numpy
 
 
-Execution Instructions
+---Execution Instructions
 
 1. Coin Detection and Segmentation
 
@@ -49,7 +48,7 @@ Navigate to the Q1 folder and run the following commands:
 --python coin_edge.py
 --python coin_segmentation.py
 
--Expected Outputs:
+---Expected Outputs:
 
 coins_with_edge_detection.jpeg – Image with detected coin edges highlighted and the total coin count.
 
