@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Input and output directories (same as your previous version)
-images_dir = os.path.join(current_dir, '..', 'images')
-results_dir = os.path.join(current_dir, '..', 'results')
+images_dir = os.path.join(current_dir, '..', 'image')
+results_dir = os.path.join(current_dir, '..', 'result')
 
 # Ensure results directory exists
 if not os.path.exists(results_dir):
